@@ -29,7 +29,7 @@ const features = [
   {
     name: "Lightning-Fast Logging",
     description:
-      "By focusing on human-centered design, we created the fastest and most efficient way to input your foods into the app.",
+      "By focusing on human-centered design, we created the fastest and most efficient way to log your foods into an app.",
     icon: BoltIcon,
   },
   {
@@ -195,7 +195,7 @@ export default function Example() {
                 href="https://youtu.be/6eOLDqO_HO8?si=H9pxHYqK8AlyVZuR"
                 className="text-sm font-semibold leading-6 text-gray-900"
               >
-                Learn more <span aria-hidden="true">→</span>
+                Watch the Demo <span aria-hidden="true">→</span>
               </a>
             </div>
           </div>
@@ -237,14 +237,15 @@ export default function Example() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Our mission: Create the best tool to fight against household food
-              waste
+              Our mission is to help households minimize their food waste
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              128 million US household kitchens make 86 billion pounds of wasted
-              food per year. This food waste harms the planet immensely. The
-              best way to fight climate change is to reduce your personal food
-              waste. FlavrAi is here to help.
+              Every year, America&apos;s 128 million household kitchens are
+              responsible for generating an astonishing 86 billion pounds of
+              food waste, significantly impacting our planet&apos;s health.
+              Reducing personal food waste stands out as a critical action in
+              the fight against climate change. Enter FlavrAi: Your ally in
+              making a difference.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
@@ -254,7 +255,7 @@ export default function Example() {
                 Join our Beta! (iPhones only)
               </a>
               <a
-                href="https://www.washingtonpost.com/climate-solutions/2021/02/25/climate-curious-food-waste/"
+                href="https://refed.org/food-waste/climate-and-resources/"
                 className="text-sm font-semibold leading-6 text-gray-900"
               >
                 Learn more <span aria-hidden="true">→</span>

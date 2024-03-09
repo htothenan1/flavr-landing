@@ -138,7 +138,7 @@ export default function Example() {
               </a>
               <a
                 target="_blank"
-                href="https://play.google.com/store/apps/details?id=com.pantrypal"
+                href="https://play.google.com/apps/internaltest/4700320344312485127"
                 class="bg-gray-600 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-500 focus:outline-none"
               >
                 <svg

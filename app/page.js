@@ -136,7 +136,7 @@ export default function Example() {
                   <span class="title-font font-medium">TestFlight</span>
                 </span>
               </a>
-              <a
+              {/* <a
                 target="_blank"
                 href="https://play.google.com/apps/internaltest/4700320344312485127"
                 class="bg-gray-600 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-500 focus:outline-none"
@@ -153,7 +153,7 @@ export default function Example() {
                   <span class="text-xs mb-1">Try it on</span>
                   <span class="title-font font-medium">Google Play</span>
                 </span>
-              </a>
+              </a> */}
               {/* </div> */}
               {/* <a
                 target="_blank"

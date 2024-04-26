@@ -109,7 +109,7 @@ export default function Example() {
               kitchen!{" "}
               <a
                 target="_blank"
-                href="https://youtu.be/6eOLDqO_HO8?si=H9pxHYqK8AlyVZuR"
+                href="https://youtu.be/VZms6lar6ts?si=BZjESPxON2moZao3"
                 className=" text-blue-700"
               >
                 Watch the demo here <span aria-hidden="true">→</span>

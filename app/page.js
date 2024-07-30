@@ -28,16 +28,16 @@ const features = [
     icon: PencilSquareIcon,
   },
   {
-    name: "AI Magic",
-    description:
-      "Snap a pic of your groceries, and our AI will recognize the common items, and log them automatically.",
-    icon: SparklesIcon,
-  },
-  {
     name: "Curated Content",
     description:
-      "Vast collection of ingredient-level data makes logging more rewarding and educational. Storage tips, cooking techniques, and more.",
+      "Vast collection of ingredient-level data makes logging rewarding and educational. Storage tips, health facts, and best flavor pairings.",
     icon: LightBulbIcon,
+  },
+  {
+    name: "AI Magic",
+    description:
+      "If an item isn't on our list of common ingredients, our AI will fill in best practice storage tips and health facts to keep you informed.",
+    icon: SparklesIcon,
   },
 ]
 
@@ -99,17 +99,15 @@ export default function Example() {
         </svg>
         <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-40">
           <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
-            <h1 className="mt-10 max-w-lg text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Take control of your kitchen with FlavrAi
+            <h1 className="max-w-lg text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+              Take control of your kitchen with FlavrPro
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Log items with minimal effort, and never lose track what is
-              spoiling. Discover personalized recipes and learn about your food
-              on a deep level. Gain the skills you need to be efficient in your
-              kitchen!{" "}
+              Log your grocery items with ease, find the right recipes, and
+              become more connected with your foods.{" "}
               <a
                 target="_blank"
-                href="https://youtu.be/VZms6lar6ts?si=BZjESPxON2moZao3"
+                href="https://youtu.be/PpPy0piEO_w?si=Xv-Lj65h0x0DVsB7"
                 className=" text-blue-700"
               >
                 Watch the demo here <span aria-hidden="true">→</span>
@@ -132,8 +130,8 @@ export default function Example() {
                   <path d="M212.1 0c-15.76.64-34.67 10.35-45.97 23.58-9.6 11.13-19 29.68-16.52 48.38a2.5 2.5 0 002.29 2.17c1.06.08 2.15.12 3.23.12 15.41 0 32.04-8.52 43.4-22.25 11.94-14.5 17.99-33.1 16.16-49.77A2.52 2.52 0 00212.1 0z"></path>
                 </svg>
                 <span class="ml-4 flex items-start flex-col leading-none">
-                  <span class="text-xs mb-1">Try it on</span>
-                  <span class="title-font font-medium">TestFlight</span>
+                  <span class="text-xs mb-1">Join the</span>
+                  <span class="title-font font-medium">FlavrPro beta</span>
                 </span>
               </a>
               {/* <a
@@ -216,7 +214,7 @@ export default function Example() {
               more than 86 billion pounds of wasted food, significantly
               impacting our planet&apos;s health. Reducing personal food waste
               stands out as the top action you can take in the fight against
-              climate change. Enter FlavrAi: Your ally in making a difference.{" "}
+              climate change. Enter FlavrPro: Your ally in making a difference.{" "}
               <a
                 target="_blank"
                 href="https://refed.org/food-waste/climate-and-resources/"

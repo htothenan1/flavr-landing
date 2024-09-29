@@ -1,17 +1,16 @@
 import Image from "next/image"
-import chefsHat from "../public/chefs_hat.png"
-import iphone from "../public/315.png"
-import foodwaste from "../public/FOODWASTE.png"
+import chefsHat from "../public/foodbankicon.png"
+import iphone from "../public/feedlink_cover.png"
 import {
   BoltIcon,
   PencilSquareIcon,
-  SparklesIcon,
   LightBulbIcon,
+  HandThumbUpIcon,
 } from "@heroicons/react/24/outline"
 
 const navigation = [
   { name: "Features", href: "#features" },
-  { name: "Mission", href: "#mission" },
+  { name: "Privacy Policy", href: "#privacy-policy" },
 ]
 
 const features = [
@@ -34,10 +33,68 @@ const features = [
     icon: LightBulbIcon,
   },
   {
-    name: "AI Magic",
+    name: "Help Food Banks",
     description:
-      "If an item isn't on our list of common ingredients, our AI will fill in best practice storage tips and health facts to keep you informed.",
-    icon: SparklesIcon,
+      "When you mark whether you liked a food box item or not, you help your food bank gain crucial insights into how they are doing!",
+    icon: HandThumbUpIcon,
+  },
+]
+
+const privacyPolicy = [
+  {
+    title: "Privacy Policy",
+    sections: [
+      {
+        heading: "1. Information We Collect",
+        content:
+          "Currently, FeedLink does not collect any personal data. However, in future updates, we may collect personal information such as your name, email, and address if you choose to register an account. Additionally, we may collect device information and app usage data to improve the service.",
+      },
+      {
+        heading: "2. Use of Information",
+        content:
+          "Even though we don’t currently collect data, if that changes, we will use your data to: provide and improve our services, personalize your experience based on the food items you log, and send updates and notifications regarding app features and services.",
+      },
+      {
+        heading: "3. Sharing of Information",
+        content:
+          "FeedLink does not share your personal data with third parties. In future versions, we may share anonymized, aggregated data with service providers or food banks to provide insights into food consumption preferences.",
+      },
+      {
+        heading: "4. Data Security",
+        content:
+          "We use industry-standard measures to protect your information and ensure your data is secure. While we don’t currently store data, any future data collection will be encrypted and securely stored.",
+      },
+      {
+        heading: "5. Data Retention",
+        content:
+          "If we begin to collect data, it will be retained for as long as necessary to provide the service or as required by law. You will have the option to request the deletion of your personal data.",
+      },
+      {
+        heading: "6. Children’s Privacy",
+        content:
+          "FeedLink does not knowingly collect personal information from children under the age of 13. If we become aware of any data collection from children, we will take immediate steps to delete it.",
+      },
+      {
+        heading: "7. Your Rights",
+        content:
+          "You have the right to access any personal data we hold about you, request the correction or deletion of your data, and opt-out of receiving communications from us.",
+      },
+      {
+        heading: "8. Third-Party Services",
+        content:
+          "FeedLink may integrate with third-party services like analytics or cloud providers. Any data shared with these services will be governed by their privacy policies, which we encourage you to review.",
+      },
+      {
+        heading: "9. Changes to This Policy",
+        content:
+          "We may update this Privacy Policy to reflect changes in our practices. Any changes will be communicated through the app, and the updated policy will be posted with a new effective date.",
+      },
+      {
+        heading: "10. Contact",
+        content:
+          "For any questions or concerns regarding this Privacy Policy, please contact us at hberissodev@gmail.com or at 200 E 36th St, New York, NY 11016.",
+      },
+    ],
   },
 ]
 
@@ -100,74 +157,19 @@ export default function Example() {
         <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-40">
           <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
             <h1 className="max-w-lg text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Take control of your kitchen with FlavrPro
+              The FeedLink App
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Log your grocery items with ease, find the right recipes, and
-              become more connected with your foods.{" "}
+              Log your food box items and other groceries with ease, and find
+              the right recipes. Help your food bank with feedback!{" "}
               <a
                 target="_blank"
-                href="https://youtu.be/PpPy0piEO_w?si=Xv-Lj65h0x0DVsB7"
+                href="https://www.youtube.com/watch?v=enLHlkADZTs"
                 className=" text-blue-700"
               >
                 Watch the demo here <span aria-hidden="true">→</span>
               </a>
             </p>
-            <div className="mt-10 flex items-center gap-x-6">
-              {/* <div class="flex lg:flex-row md:flex-col"> */}
-              <a
-                target="_blank"
-                href="https://testflight.apple.com/join/rkACgNHx"
-                class="bg-gray-600 inline-flex py-3 px-5 rounded-lg items-center lg:ml-4 md:ml-0 ml-4 md:mt-4 mt-0 lg:mt-0 hover:bg-gray-500 focus:outline-none"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  class="w-6 h-6"
-                  viewBox="0 0 305 305"
-                >
-                  <path d="M40.74 112.12c-25.79 44.74-9.4 112.65 19.12 153.82C74.09 286.52 88.5 305 108.24 305c.37 0 .74 0 1.13-.02 9.27-.37 15.97-3.23 22.45-5.99 7.27-3.1 14.8-6.3 26.6-6.3 11.22 0 18.39 3.1 25.31 6.1 6.83 2.95 13.87 6 24.26 5.81 22.23-.41 35.88-20.35 47.92-37.94a168.18 168.18 0 0021-43l.09-.28a2.5 2.5 0 00-1.33-3.06l-.18-.08c-3.92-1.6-38.26-16.84-38.62-58.36-.34-33.74 25.76-51.6 31-54.84l.24-.15a2.5 2.5 0 00.7-3.51c-18-26.37-45.62-30.34-56.73-30.82a50.04 50.04 0 00-4.95-.24c-13.06 0-25.56 4.93-35.61 8.9-6.94 2.73-12.93 5.09-17.06 5.09-4.64 0-10.67-2.4-17.65-5.16-9.33-3.7-19.9-7.9-31.1-7.9l-.79.01c-26.03.38-50.62 15.27-64.18 38.86z"></path>
-                  <path d="M212.1 0c-15.76.64-34.67 10.35-45.97 23.58-9.6 11.13-19 29.68-16.52 48.38a2.5 2.5 0 002.29 2.17c1.06.08 2.15.12 3.23.12 15.41 0 32.04-8.52 43.4-22.25 11.94-14.5 17.99-33.1 16.16-49.77A2.52 2.52 0 00212.1 0z"></path>
-                </svg>
-                <span class="ml-4 flex items-start flex-col leading-none">
-                  <span class="text-xs mb-1">Join the</span>
-                  <span class="title-font font-medium">FlavrPro beta</span>
-                </span>
-              </a>
-              {/* <a
-                target="_blank"
-                href="https://play.google.com/apps/internaltest/4700320344312485127"
-                class="bg-gray-600 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-500 focus:outline-none"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  class="w-6 h-6"
-                  viewBox="0 0 512 512"
-                >
-                  <path d="M99.617 8.057a50.191 50.191 0 00-38.815-6.713l230.932 230.933 74.846-74.846L99.617 8.057zM32.139 20.116c-6.441 8.563-10.148 19.077-10.148 30.199v411.358c0 11.123 3.708 21.636 10.148 30.199l235.877-235.877L32.139 20.116zM464.261 212.087l-67.266-37.637-81.544 81.544 81.548 81.548 67.273-37.64c16.117-9.03 25.738-25.442 25.738-43.908s-9.621-34.877-25.749-43.907zM291.733 279.711L60.815 510.629c3.786.891 7.639 1.371 11.492 1.371a50.275 50.275 0 0027.31-8.07l266.965-149.372-74.849-74.847z"></path>
-                </svg>
-                <span class="ml-4 flex items-start flex-col leading-none">
-                  <span class="text-xs mb-1">Try it on</span>
-                  <span class="title-font font-medium">Google Play</span>
-                </span>
-              </a> */}
-              {/* </div> */}
-              {/* <a
-                target="_blank"
-                href="https://testflight.apple.com/join/rkACgNHx"
-                className="rounded-md bg-gray-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Join our Beta! (iPhones only)
-              </a> */}
-              {/* <a
-                target="_blank"
-                href="https://youtu.be/6eOLDqO_HO8?si=H9pxHYqK8AlyVZuR"
-                className="text-sm font-semibold leading-6 text-gray-900"
-              >
-                Watch the Demo <span aria-hidden="true">→</span>
-              </a> */}
-            </div>
           </div>
           <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
             <div className="mx-auto w-[22.875rem] max-w-full drop-shadow-xl">
@@ -176,6 +178,7 @@ export default function Example() {
           </div>
         </div>
       </div>
+
       <div id="features" className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
@@ -203,51 +206,23 @@ export default function Example() {
           </div>
         </div>
       </div>
-      <div id="mission" className="py-24 sm:py-32 lg:pb-40">
+
+      <div id="privacy-policy" className="bg-gray-50 py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Our mission is to help households minimize their food waste
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Every year in America, 128 million household kitchens generate
-              more than 86 billion pounds of wasted food, significantly
-              impacting our planet&apos;s health. Reducing personal food waste
-              stands out as the top action you can take in the fight against
-              climate change. Enter FlavrPro: Your ally in making a difference.{" "}
-              <a
-                target="_blank"
-                href="https://refed.org/food-waste/climate-and-resources/"
-                className="text-blue-700"
-              >
-                Learn more <span aria-hidden="true">→</span>
-              </a>
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              {/* <a
-                target="_blank"
-                href="https://testflight.apple.com/join/rkACgNHx"
-                className="rounded-md bg-gray-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Join our Beta! (iPhones only)
-              </a> */}
-              {/* <a
-                target="_blank"
-                href="https://refed.org/food-waste/climate-and-resources/"
-                className="text-sm font-semibold leading-6 text-gray-900"
-              >
-                Learn more <span aria-hidden="true">→</span>
-              </a> */}
-            </div>
-          </div>
-          <div className="flex justify-center">
-            <Image
-              src={foodwaste}
-              alt="App screenshot"
-              width={850}
-              height={400}
-              className="rounded-md shadow-2xl ring-1 ring-gray-900/10"
-            />
+          <div className="mx-auto max-w-2xl lg:max-w-none">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Privacy Policy
+            </h2>
+            {privacyPolicy[0].sections.map((section, index) => (
+              <div key={index} className="mt-10">
+                <h3 className="text-xl font-semibold leading-7 text-gray-900">
+                  {section.heading}
+                </h3>
+                <p className="mt-4 text-base leading-7 text-gray-600">
+                  {section.content}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -1,4 +1,7 @@
+"use client" // Add this line at the top to make it a client component
+
 import Image from "next/image"
+import { useState } from "react"
 import chefsHat from "../public/foodbankicon.png"
 import iphone from "../public/feedlink_cover.png"
 import {
@@ -40,65 +43,55 @@ const features = [
   },
 ]
 
-const privacyPolicy = [
-  {
-    title: "Privacy Policy",
-    sections: [
-      {
-        heading: "1. Information We Collect",
-        content:
-          "Currently, FeedLink does not collect any personal data. However, in future updates, we may collect personal information such as your name, email, and address if you choose to register an account. Additionally, we may collect device information and app usage data to improve the service.",
-      },
-      {
-        heading: "2. Use of Information",
-        content:
-          "Even though we don’t currently collect data, if that changes, we will use your data to: provide and improve our services, personalize your experience based on the food items you log, and send updates and notifications regarding app features and services.",
-      },
-      {
-        heading: "3. Sharing of Information",
-        content:
-          "FeedLink does not share your personal data with third parties. In future versions, we may share anonymized, aggregated data with service providers or food banks to provide insights into food consumption preferences.",
-      },
-      {
-        heading: "4. Data Security",
-        content:
-          "We use industry-standard measures to protect your information and ensure your data is secure. While we don’t currently store data, any future data collection will be encrypted and securely stored.",
-      },
-      {
-        heading: "5. Data Retention",
-        content:
-          "If we begin to collect data, it will be retained for as long as necessary to provide the service or as required by law. You will have the option to request the deletion of your personal data.",
-      },
-      {
-        heading: "6. Children’s Privacy",
-        content:
-          "FeedLink does not knowingly collect personal information from children under the age of 13. If we become aware of any data collection from children, we will take immediate steps to delete it.",
-      },
-      {
-        heading: "7. Your Rights",
-        content:
-          "You have the right to access any personal data we hold about you, request the correction or deletion of your data, and opt-out of receiving communications from us.",
-      },
-      {
-        heading: "8. Third-Party Services",
-        content:
-          "FeedLink may integrate with third-party services like analytics or cloud providers. Any data shared with these services will be governed by their privacy policies, which we encourage you to review.",
-      },
-      {
-        heading: "9. Changes to This Policy",
-        content:
-          "We may update this Privacy Policy to reflect changes in our practices. Any changes will be communicated through the app, and the updated policy will be posted with a new effective date.",
-      },
-      {
-        heading: "10. Contact",
-        content:
-          "For any questions or concerns regarding this Privacy Policy, please contact us at hberissodev@gmail.com or at 200 E 36th St, New York, NY 11016.",
-      },
-    ],
-  },
-]
-
 export default function Example() {
+  const [email, setEmail] = useState("")
+  const [errorMessage, setErrorMessage] = useState("")
+  const [successMessage, setSuccessMessage] = useState("")
+  const [isLoading, setIsLoading] = useState(false) // Loading state
+
+  // Function to handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault() // Prevent default form behavior (page reload)
+
+    // Simple email validation (can be improved)
+    if (!email.includes("@")) {
+      setErrorMessage("Please enter a valid email address.")
+      return
+    }
+
+    setIsLoading(true) // Set loading state to true
+
+    try {
+      // Send a POST request to your backend
+      const response = await fetch(
+        "https://flavr-413021.ue.r.appspot.com/signup",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email }),
+        }
+      )
+
+      if (response.ok) {
+        setSuccessMessage("Thank you for signing up!")
+        setErrorMessage("")
+        setEmail("") // Reset email field
+      } else {
+        const errorData = await response.json()
+        setErrorMessage(errorData.message || "Something went wrong.")
+        setSuccessMessage("") // Clear success message if any
+      }
+    } catch (error) {
+      setErrorMessage("Error submitting form. Please try again.")
+      setSuccessMessage("") // Clear success message if any
+      console.error("Error submitting email:", error)
+    } finally {
+      setIsLoading(false) // Reset loading state
+    }
+  }
+
   return (
     <div className="bg-white">
       <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -170,6 +163,80 @@ export default function Example() {
                 Watch the demo here <span aria-hidden="true">→</span>
               </a>
             </p>
+
+            {/* Adjusted Section: Email Subscription Form */}
+            <div className="mt-8">
+              {" "}
+              {/* Reduced margin for less prominence */}
+              <h2 className="text-xl font-medium tracking-tight text-gray-900 sm:text-2xl">
+                Sign Up for Early Access
+              </h2>
+              <p className="mt-2 text-sm leading-6 text-gray-500">
+                Want to try out the app? Enter your email below, and we’ll email
+                you everything you need to log in.
+              </p>
+              <form onSubmit={handleSubmit} className="mt-2 sm:flex">
+                <div className="w-full sm:flex sm:items-center">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)} // Update the state when input changes
+                    className="w-full px-3 py-2 placeholder-gray-400 text-gray-900 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent sm:max-w-xs"
+                    placeholder="Enter your email"
+                    required
+                    disabled={isLoading} // Disable input when loading
+                  />
+
+                  <button
+                    type="submit"
+                    className={`mt-2 w-full sm:ml-2 sm:mt-0 sm:w-auto bg-blue-600 text-white py-2 px-4 rounded-lg shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 ${
+                      isLoading ? "opacity-50 cursor-not-allowed" : ""
+                    }`}
+                    disabled={isLoading} // Disable button when loading
+                  >
+                    {isLoading ? (
+                      <span className="flex items-center">
+                        <svg
+                          className="animate-spin h-5 w-5 mr-2 text-white"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                        >
+                          <circle
+                            className="opacity-25"
+                            cx="12"
+                            cy="12"
+                            r="10"
+                            stroke="currentColor"
+                            strokeWidth="4"
+                          ></circle>
+                          <path
+                            className="opacity-75"
+                            fill="currentColor"
+                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                          ></path>
+                        </svg>
+                        Loading...
+                      </span>
+                    ) : (
+                      "Sign Up"
+                    )}
+                  </button>
+                </div>
+
+                {/* Success/Error Messages */}
+                {successMessage && (
+                  <p className="mt-2 text-sm text-green-600">
+                    {successMessage}
+                  </p>
+                )}
+                {errorMessage && (
+                  <p className="mt-2 text-sm text-red-600">{errorMessage}</p>
+                )}
+              </form>
+            </div>
           </div>
           <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
             <div className="mx-auto w-[22.875rem] max-w-full drop-shadow-xl">
@@ -213,16 +280,54 @@ export default function Example() {
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Privacy Policy
             </h2>
-            {privacyPolicy[0].sections.map((section, index) => (
-              <div key={index} className="mt-10">
-                <h3 className="text-xl font-semibold leading-7 text-gray-900">
-                  {section.heading}
-                </h3>
-                <p className="mt-4 text-base leading-7 text-gray-600">
-                  {section.content}
-                </p>
-              </div>
-            ))}
+            <div className="mt-10">
+              <h3 className="text-xl font-semibold leading-7 text-gray-900">
+                1. No Data Collection
+              </h3>
+              <p className="mt-4 text-base leading-7 text-gray-600">
+                FeedLink does not collect any personal data, usage data, or
+                location data. The app operates solely on your device and does
+                not transmit information to any external servers.
+              </p>
+            </div>
+            <div className="mt-10">
+              <h3 className="text-xl font-semibold leading-7 text-gray-900">
+                2. No Third-Party Sharing
+              </h3>
+              <p className="mt-4 text-base leading-7 text-gray-600">
+                Since FeedLink does not collect any data, we do not share any
+                personal information with third-party service providers or
+                partners.
+              </p>
+            </div>
+            <div className="mt-10">
+              <h3 className="text-xl font-semibold leading-7 text-gray-900">
+                3. No Cookies or Tracking
+              </h3>
+              <p className="mt-4 text-base leading-7 text-gray-600">
+                FeedLink does not use cookies, tracking technologies, or any
+                form of analytics tools.
+              </p>
+            </div>
+            <div className="mt-10">
+              <h3 className="text-xl font-semibold leading-7 text-gray-900">
+                4. Future Changes
+              </h3>
+              <p className="mt-4 text-base leading-7 text-gray-600">
+                As we continue to develop FeedLink, we may introduce new
+                features that involve data collection. In that event, we will
+                update this Privacy Policy to reflect the changes.
+              </p>
+            </div>
+            <div className="mt-10">
+              <h3 className="text-xl font-semibold leading-7 text-gray-900">
+                5. Contact
+              </h3>
+              <p className="mt-4 text-base leading-7 text-gray-600">
+                For any questions, contact us at hberissodev@gmail.com or at 200
+                E 36th St, New York, NY 11016.
+              </p>
+            </div>
           </div>
         </div>
       </div>

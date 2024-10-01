@@ -324,8 +324,8 @@ export default function Example() {
                 5. Contact
               </h3>
               <p className="mt-4 text-base leading-7 text-gray-600">
-                For any questions, contact us at hberissodev@gmail.com or at 200
-                E 36th St, New York, NY 11016.
+                For any questions, contact Hernan Berisso at
+                hberissodev@gmail.com
               </p>
             </div>
           </div>

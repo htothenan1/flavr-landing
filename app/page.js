@@ -20,7 +20,7 @@ const features = [
   {
     name: "Superior Item Logger",
     description:
-      "By focusing on human-centered design, we created the fastest and most efficient way to log your foods into an app.",
+      "By focusing on human-centered design principles, we created the fastest and most efficient way to log your foods into an app.",
     icon: BoltIcon,
   },
   {
@@ -101,7 +101,7 @@ export default function Example() {
           aria-label="Global"
         >
           <a href="#" className="-m-1.5 p-1.5">
-            <Image width={100} height={100} src={chefsHat} alt="" />
+            <Image width={125} height={125} src={chefsHat} alt="" />
           </a>
           <div className="flex gap-x-12">
             {navigation.map((item) => (
@@ -147,17 +147,20 @@ export default function Example() {
             fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)"
           />
         </svg>
-        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-40">
+        <div className="mx-auto max-w-7xl px-6 py-20 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
             <h1 className="max-w-lg text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              The FeedLink App
+              FeedLink App
             </h1>
+            <h2 className="max-w-lg text-2xl font-bold tracking-tight text-gray-900">
+              (formerly FlavrPro)
+            </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Log your food box items and other groceries with ease, and find
               the right recipes. Help your food bank with feedback!{" "}
               <a
                 target="_blank"
-                href="https://www.youtube.com/watch?v=enLHlkADZTs"
+                href="https://www.youtube.com/watch?v=BgyIAUYUVHU"
                 className=" text-blue-700"
               >
                 Watch the demo here <span aria-hidden="true">→</span>
@@ -172,8 +175,7 @@ export default function Example() {
                 Sign Up for Early Access
               </h2>
               <p className="mt-2 text-sm leading-6 text-gray-500">
-                Want to try out the app? Enter your email below, and we’ll email
-                you everything you need to log in.
+                Get notified when early access becomes available
               </p>
               <form onSubmit={handleSubmit} className="mt-2 sm:flex">
                 <div className="w-full sm:flex sm:items-center">

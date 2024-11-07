@@ -28,19 +28,19 @@ const features = [
   {
     name: "Recipes On-Demand",
     description:
-      "Advanced recipe search tool, based on the items that you have. Find new and exciting ways to combine and consume your foods.",
+      "Advanced recipe search tool, based on the items that you have. Find new ways to combine your foods.",
     icon: PencilSquareIcon,
   },
   {
     name: "Curated Content",
     description:
-      "Vast collection of food data makes logging rewarding and educational. Storage tips, health facts, and best flavor pairings.",
+      "Vast collection of food data makes logging rewarding. Storage tips, health facts, and best flavor pairings.",
     icon: LightBulbIcon,
   },
   {
     name: "Reduce Food Waste",
     description:
-      "By practicing a cycle of logging your foods, setting SMART goals, and continuous learning, you will waste less food at home.",
+      "By practicing a cycle of logging your foods, setting SMART goals, and continuous learning, you will waste less food.",
     icon: HandThumbUpIcon,
   },
 ]
@@ -154,21 +154,27 @@ export default function Example() {
             <h1 className="max-w-lg text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
               FeedLink App
             </h1>
-            {/* <h2 className="max-w-lg text-2xl font-bold tracking-tight text-gray-900">
-              (formerly FlavrPro)
-            </h2> */}
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Log your groceries, find the right recipes, and track your food
-              waste.{" "}
+              waste.
+            </p>
+            <p className="text-lg leading-8 text-gray-600">
               <a
                 target="_blank"
                 href="https://www.youtube.com/watch?v=BgyIAUYUVHU"
-                className=" text-blue-700"
+                className="text-blue-700 hover:underline"
               >
-                Watch the demo here <span aria-hidden="true">→</span>
+                Watch the demo
+              </a>{" "}
+              or{" "}
+              <a
+                href="/FeedLink_Overview.pdf"
+                download
+                className="text-blue-700 hover:underline"
+              >
+                download the concept slides
               </a>
             </p>
-
             {/* Adjusted Section: Email Subscription Form */}
             <div className="mt-8">
               {" "}

@@ -4,6 +4,7 @@ import Image from "next/image"
 import { useState } from "react"
 import chefsHat from "../public/foodbankicon.png"
 import iphone from "../public/feedlink_cover.png"
+import foodwaste from "../public/FOODWASTE.png"
 import {
   BoltIcon,
   PencilSquareIcon,
@@ -13,6 +14,7 @@ import {
 
 const navigation = [
   { name: "Features", href: "#features" },
+  { name: "Mission", href: "#mission" },
   { name: "Privacy Policy", href: "#privacy-policy" },
 ]
 
@@ -20,7 +22,7 @@ const features = [
   {
     name: "Superior Item Logger",
     description:
-      "By focusing on human-centered design principles, we created the fastest and most efficient way to log your foods into an app.",
+      "The fastest and most efficient way to log your foods. Keep track of what you have, and what you waste.",
     icon: BoltIcon,
   },
   {
@@ -32,13 +34,13 @@ const features = [
   {
     name: "Curated Content",
     description:
-      "Vast collection of ingredient-level data makes logging rewarding and educational. Storage tips, health facts, and best flavor pairings.",
+      "Vast collection of food data makes logging rewarding and educational. Storage tips, health facts, and best flavor pairings.",
     icon: LightBulbIcon,
   },
   {
-    name: "Help Food Banks",
+    name: "Reduce Food Waste",
     description:
-      "When you mark whether you liked a food box item or not, you help your food bank gain crucial insights into how they are doing!",
+      "By practicing a cycle of logging your foods, setting SMART goals, and continuous learning, you will waste less food at home.",
     icon: HandThumbUpIcon,
   },
 ]
@@ -152,12 +154,12 @@ export default function Example() {
             <h1 className="max-w-lg text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
               FeedLink App
             </h1>
-            <h2 className="max-w-lg text-2xl font-bold tracking-tight text-gray-900">
+            {/* <h2 className="max-w-lg text-2xl font-bold tracking-tight text-gray-900">
               (formerly FlavrPro)
-            </h2>
+            </h2> */}
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Log your food box items and other groceries with ease, and find
-              the right recipes. Help your food bank with feedback!{" "}
+              Log your groceries, find the right recipes, and track your food
+              waste.{" "}
               <a
                 target="_blank"
                 href="https://www.youtube.com/watch?v=BgyIAUYUVHU"
@@ -175,7 +177,7 @@ export default function Example() {
                 Sign Up for Early Access
               </h2>
               <p className="mt-2 text-sm leading-6 text-gray-500">
-                Get notified when early access becomes available
+                Receive an email when the app becomes available
               </p>
               <form onSubmit={handleSubmit} className="mt-2 sm:flex">
                 <div className="w-full sm:flex sm:items-center">
@@ -272,6 +274,40 @@ export default function Example() {
                 </div>
               ))}
             </dl>
+          </div>
+        </div>
+      </div>
+
+      <div id="mission" className="py-24 sm:py-32 lg:pb-40">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+              Our mission is to help you reduce your food waste
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              Every year, American households waste approximately 86 billion
+              pounds of food, even as 18 million households face food
+              insecurity. By reducing your food waste, you’re not only helping
+              the planet and saving money, but you’re also contributing to a
+              more equitable and sustainable food system for everyone.{" "}
+              <a
+                target="_blank"
+                href="https://refed.org/food-waste/climate-and-resources/"
+                className="text-blue-700"
+              >
+                Learn more <span aria-hidden="true">→</span>
+              </a>
+            </p>
+            <div className="mt-10 flex items-center justify-center gap-x-6"></div>
+          </div>
+          <div className="flex justify-center">
+            <Image
+              src={foodwaste}
+              alt="App screenshot"
+              width={850}
+              height={400}
+              className="rounded-md shadow-2xl ring-1 ring-gray-900/10"
+            />
           </div>
         </div>
       </div>

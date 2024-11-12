@@ -180,7 +180,7 @@ export default function Example() {
               {" "}
               {/* Reduced margin for less prominence */}
               <h2 className="text-xl font-medium tracking-tight text-gray-900 sm:text-2xl">
-                Sign Up for Early Access
+                Sign Up for Early Access (iPhone only)
               </h2>
               <p className="mt-2 text-sm leading-6 text-gray-500">
                 Receive an email when the app becomes available
